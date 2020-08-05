@@ -7,7 +7,7 @@
     tools:context=".hospitalLogin">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/donorLoginButton"
         android:layout_width="271dp"
         android:layout_height="73dp"
         android:background="#00FFFFFF"
@@ -26,7 +26,7 @@
         android:ems="10"
         android:hint="Hospital Email"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/donorLoginButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
         android:ems="10"
         android:hint="Hospital Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/donorLoginButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,14 +48,14 @@
         app:layout_constraintVertical_bias="0.87" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/donorSignupTxt"
         android:layout_width="219dp"
         android:layout_height="39dp"
         android:text="No hospital account yet? Sign Up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/donorLoginButton"
         app:layout_constraintVertical_bias="0.155" />
 
 

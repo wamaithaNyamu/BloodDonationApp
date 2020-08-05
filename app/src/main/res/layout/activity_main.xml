@@ -7,10 +7,10 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/donorSignupOnMain"
         android:layout_width="177dp"
         android:layout_height="61dp"
-        android:text="Button"
+        android:text="DONOR SIGNUP"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.568"

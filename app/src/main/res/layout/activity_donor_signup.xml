@@ -7,7 +7,7 @@
     tools:context=".donorSignup">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/donorSignupButton"
         android:layout_width="271dp"
         android:layout_height="73dp"
         android:background="#00FFFFFF"
@@ -17,35 +17,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.618" />
+        app:layout_constraintVertical_bias="0.773" />
 
     <EditText
         android:id="@+id/donorEmailSignup"
         android:layout_width="276dp"
         android:layout_height="53dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
         android:hint="Your email"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/donorPasswordSignup1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35" />
+        app:layout_constraintVertical_bias="0.586" />
 
     <EditText
         android:id="@+id/donorPasswordSignup1"
         android:layout_width="276dp"
         android:layout_height="53dp"
+        android:layout_marginTop="212dp"
         android:ems="10"
         android:hint="Your Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/donorPasswordSignup2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.644" />
+        app:layout_constraintVertical_bias="0.486" />
 
     <EditText
         android:id="@+id/donorPasswordSignup2"
@@ -54,22 +56,23 @@
         android:ems="10"
         android:hint="Confirm Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/donorSignupButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.918" />
+        app:layout_constraintVertical_bias="0.885" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/donorSignintxt"
         android:layout_width="219dp"
         android:layout_height="39dp"
+        android:layout_marginBottom="52dp"
         android:text="Already have an account? Sign In"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/donorSignupButton"
         app:layout_constraintVertical_bias="0.155" />
 
 
