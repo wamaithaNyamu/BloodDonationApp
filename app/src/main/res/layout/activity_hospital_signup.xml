@@ -41,10 +41,10 @@
         android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/hospitalSignupButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.595" />
+        app:layout_constraintVertical_bias="0.612" />
 
     <EditText
         android:id="@+id/hospitalPasswordSignup1"
@@ -63,7 +63,7 @@
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.735" />
+        app:layout_constraintVertical_bias="0.78" />
 
     <EditText
         android:id="@+id/hospitalPasswordSignup2"
@@ -82,7 +82,7 @@
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.882" />
+        app:layout_constraintVertical_bias="0.927" />
 
     <TextView
         android:id="@+id/hospitalSignintxt"
