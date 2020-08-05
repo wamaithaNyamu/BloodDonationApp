@@ -3,6 +3,7 @@ package com.example.blood_donation_app;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -23,7 +24,7 @@ public class donorLogin extends AppCompatActivity {
     private Button signInButton;
     private TextView signupTxt;
     private FirebaseAuth firebaseAuth;
-
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,7 @@ public class donorLogin extends AppCompatActivity {
         password = findViewById(R.id.donorPasswordLogin);
         signupTxt = findViewById(R.id.donorSignupTxt);
         signInButton = findViewById(R.id.donorLoginButton);
-
+        progressDialog= new ProgressDialog(this);
 
 //        signup button
         signInButton.setOnClickListener(new View.OnClickListener() {
@@ -79,6 +80,10 @@ private void Login(){
         email.setError("Invalid email");
         return;
     }
+    progressDialog.setMessage("Please wait ...");
+    progressDialog.show();
+    progressDialog.setCanceledOnTouchOutside(false);
+
     firebaseAuth.signInWithEmailAndPassword(theEmail, thePassword1).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
         @Override
         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -93,6 +98,8 @@ private void Login(){
                 Toast.makeText(donorLogin.this, "Sign In failed!", Toast.LENGTH_LONG).show();
 
             }
+
+            progressDialog.dismiss();
         }
     });
 
