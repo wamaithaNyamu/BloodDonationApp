@@ -4,58 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".donorSignup">
 
     <Button
         android:id="@+id/donorSignupButton"
-        android:layout_width="271dp"
-        android:layout_height="73dp"
-        android:background="#00FFFFFF"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#11000000"
+        android:gravity="center_horizontal"
         android:text="SIGN UP"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.773" />
+        app:layout_constraintVertical_bias="0.843" />
 
     <EditText
         android:id="@+id/donorEmailSignup"
-        android:layout_width="276dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/user_icon"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint="Your email"
         android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@color/colorTransparentWhite"
+        android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/donorPasswordSignup1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.586" />
+        app:layout_constraintVertical_bias="0.817" />
 
     <EditText
         android:id="@+id/donorPasswordSignup1"
-        android:layout_width="276dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="212dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/password_icon"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint="Your Password"
         android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorTransparentWhite"
         app:layout_constraintBottom_toTopOf="@+id/donorPasswordSignup2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.486" />
+        app:layout_constraintVertical_bias="0.841" />
 
     <EditText
         android:id="@+id/donorPasswordSignup2"
-        android:layout_width="276dp"
-        android:layout_height="53dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/password_icon"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint="Confirm Password"
         android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColorHint="@color/colorTransparentWhite"
         app:layout_constraintBottom_toTopOf="@+id/donorSignupButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
@@ -65,15 +86,48 @@
 
     <TextView
         android:id="@+id/donorSignintxt"
-        android:layout_width="219dp"
-        android:layout_height="39dp"
-        android:layout_marginBottom="52dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:gravity="center_horizontal"
         android:text="Already have an account? Sign In"
+        android:textAlignment="center"
+        android:textColor="@color/colorTransparentWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/donorSignupButton"
-        app:layout_constraintVertical_bias="0.155" />
+        app:layout_constraintVertical_bias="0.767" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="384dp"
+        android:layout_height="143dp"
+        android:layout_marginBottom="572dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/donor" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="250dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:text="Signup as a donor "
+        android:textAlignment="center"
+        android:textColor="@color/colorTransparentWhite"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/donorEmailSignup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

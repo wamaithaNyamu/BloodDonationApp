@@ -4,28 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".donorLogin">
 
     <Button
         android:id="@+id/donorLoginButton"
-        android:layout_width="271dp"
-        android:layout_height="73dp"
-        android:background="#00FFFFFF"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#11000000"
+        android:gravity="center_horizontal"
         android:text="SIGN IN"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.618" />
+        app:layout_constraintVertical_bias="0.751" />
 
     <EditText
         android:id="@+id/donorEmailLogin"
-        android:layout_width="276dp"
-        android:layout_height="53dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/user_icon"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint="Your email"
         android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@color/colorTransparentWhite"
+        android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/donorLoginButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.518"
@@ -35,11 +47,17 @@
 
     <EditText
         android:id="@+id/donorPasswordLogin"
-        android:layout_width="276dp"
-        android:layout_height="53dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/password_icon"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint="Your Password"
         android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorTransparentWhite"
         app:layout_constraintBottom_toTopOf="@+id/donorLoginButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.518"
@@ -49,14 +67,47 @@
 
     <TextView
         android:id="@+id/donorSignupTxt"
-        android:layout_width="219dp"
-        android:layout_height="39dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:gravity="center_horizontal"
         android:text="No donor account yet? Sign Up"
+        android:textAlignment="center"
+        android:textColor="@color/colorTransparentWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/donorLoginButton"
-        app:layout_constraintVertical_bias="0.155" />
+        app:layout_constraintVertical_bias="0.459" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="384dp"
+        android:layout_height="143dp"
+        android:layout_marginBottom="572dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/donor" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="250dp"
+        android:layout_height="37dp"
+        android:gravity="center_horizontal"
+        android:text="Login as a donor "
+        android:textAlignment="center"
+        android:textColor="@color/colorTransparentWhite"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.046" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

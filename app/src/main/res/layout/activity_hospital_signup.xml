@@ -4,73 +4,131 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".hospitalSignup">
 
     <Button
-        android:id="@+id/donorLoginButton"
-        android:layout_width="271dp"
-        android:layout_height="73dp"
-        android:background="#00FFFFFF"
+        android:id="@+id/hospitalSignupButton"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#11000000"
+        android:gravity="center_horizontal"
         android:text="SIGN UP"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.618" />
+        app:layout_constraintVertical_bias="0.755" />
 
     <EditText
         android:id="@+id/hospitalEmailSignup"
-        android:layout_width="276dp"
-        android:layout_height="53dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/user_icon"
         android:ems="10"
+        android:gravity="center_horizontal"
+
         android:hint="Hospital email"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/donorLoginButton"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@color/colorTransparentWhite"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/hospitalSignupButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35" />
+        app:layout_constraintVertical_bias="0.595" />
 
     <EditText
         android:id="@+id/hospitalPasswordSignup1"
-        android:layout_width="276dp"
-        android:layout_height="53dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/password_icon"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint=" Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/donorLoginButton"
+        android:textAlignment="center"
+        android:textColorHint="@color/colorTransparentWhite"
+        app:layout_constraintBottom_toTopOf="@+id/hospitalSignupButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.644" />
+        app:layout_constraintVertical_bias="0.735" />
 
     <EditText
         android:id="@+id/hospitalPasswordSignup2"
-        android:layout_width="276dp"
-        android:layout_height="53dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/password_icon"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint="Confirm Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/donorLoginButton"
+        android:textAlignment="center"
+        android:textColorHint="@color/colorTransparentWhite"
+        app:layout_constraintBottom_toTopOf="@+id/hospitalSignupButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.918" />
+        app:layout_constraintVertical_bias="0.882" />
 
     <TextView
-        android:id="@+id/donorSignupTxt"
-        android:layout_width="219dp"
-        android:layout_height="39dp"
+        android:id="@+id/hospitalSignintxt"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:gravity="center_horizontal"
         android:text="Already have an account? Sign In"
+        android:textAlignment="center"
+        android:textColor="@color/colorTransparentWhite"
+        android:textColorHint="@color/colorTransparentWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/donorLoginButton"
-        app:layout_constraintVertical_bias="0.155" />
+        app:layout_constraintTop_toBottomOf="@+id/hospitalSignupButton"
+        app:layout_constraintVertical_bias="0.186" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="384dp"
+        android:layout_height="143dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.09"
+        app:srcCompat="@drawable/hosi1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="250dp"
+        android:layout_height="37dp"
+        android:gravity="center_horizontal"
+        android:text="Sign up as a hospital "
+        android:textAlignment="center"
+        android:textColor="@color/colorTransparentWhite"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

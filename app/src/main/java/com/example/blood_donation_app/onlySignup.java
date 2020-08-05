@@ -6,43 +6,40 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-
-
+import android.widget.ImageButton;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity {
-
-    private Button allSignups,allLogins;
+public class onlySignup extends AppCompatActivity {
+    private ImageButton donorSignup, hospitalSignup;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_only_signup);
 
-        allSignups = findViewById(R.id.allSignups);
-        allSignups.setOnClickListener(new View.OnClickListener() {
+        donorSignup = findViewById(R.id.donorImageSignup);
+        donorSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                Intent intent  = new Intent(MainActivity.this, onlySignup.class);
+                Intent intent  = new Intent(onlySignup.this, donorSignup.class);
                 startActivity(intent);
                 finish();
             }
         });
 
 
-
-        allLogins = findViewById(R.id.alllogins);
-        allLogins.setOnClickListener(new View.OnClickListener() {
+        hospitalSignup = findViewById(R.id.hospitalImageSignup);
+        hospitalSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                Intent intent  = new Intent(MainActivity.this, onlyLogins.class);
+                Intent intent  = new Intent(onlySignup.this, hospitalSignup.class);
                 startActivity(intent);
                 finish();
             }
         });
-    }
-}
 
+
+    };
+};

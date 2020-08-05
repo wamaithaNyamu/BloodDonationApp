@@ -9,12 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".donorDashboard"></activity>
+        <activity android:name=".onlySignup" />
+        <activity android:name=".onlyLogins" />
+        <activity android:name=".donorDashboard" />
+        <activity android:name=".hospitalDashboard" />
         <activity android:name=".hospitalSignup" />
         <activity android:name=".donorSignup" />
         <activity android:name=".hospitalLogin" />
         <activity android:name=".donorLogin" />
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
