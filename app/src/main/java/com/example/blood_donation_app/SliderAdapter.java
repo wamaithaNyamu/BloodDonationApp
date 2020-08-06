@@ -40,9 +40,7 @@ public class SliderAdapter extends PagerAdapter {
             "The shortage of blood during the crises in this country over the past few years is a sure reason to get anybody worried, and those concerned with ensuring that our blood banks are in order are even more worried",
             "60% of the blood collected in Kenya is from high school children.50 million is the total population of Kenya.1% of the population is the World Health Organization recommended percentage of the country's blood collection.250,000 -is the current units of blood collected annually in Kenya.",
             "You can make a difference. Your blood matters. Donate blood and save a life",
-//            "You can make a difference. Your blood matters. Donate blood and save a life",
-//            "You can make a difference. Your blood matters. Donate blood and save a life",
-//            "You can make a difference. Your blood matters. Donate blood and save a life",
+
 
     };
 
