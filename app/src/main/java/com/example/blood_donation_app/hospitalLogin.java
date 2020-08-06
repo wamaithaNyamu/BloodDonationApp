@@ -56,7 +56,7 @@ public class hospitalLogin extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent  = new Intent(hospitalLogin.this, hospitalSignup.class);
                 startActivity(intent);
-                finish();
+//                finish();
 
             }
         });
@@ -95,7 +95,7 @@ public class hospitalLogin extends AppCompatActivity {
                     Toast.makeText(hospitalLogin.this, "You've been signed in!", Toast.LENGTH_LONG).show();
                     Intent intent  = new Intent(hospitalLogin.this, hospitalDashboard.class);
                     startActivity(intent);
-                    finish();
+//                    finish();
 
                 }
                 else {

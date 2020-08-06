@@ -31,7 +31,7 @@ public class hospitalDashboard extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent  = new Intent(hospitalDashboard.this, hospitalLogin.class);
                 startActivity(intent);
-                finish();
+//                finish();
             }
         });
     }

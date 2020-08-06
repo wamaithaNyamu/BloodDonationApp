@@ -23,7 +23,7 @@ public class onlyLogins extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent  = new Intent(onlyLogins.this, donorLogin.class);
                 startActivity(intent);
-                finish();
+//                finish();
             }
         });
 
@@ -35,7 +35,7 @@ public class onlyLogins extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent  = new Intent(onlyLogins.this, hospitalLogin.class);
                 startActivity(intent);
-                finish();
+//                finish();
             }
         });
 

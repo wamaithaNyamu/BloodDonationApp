@@ -14,38 +14,66 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="61dp"
-        android:layout_marginLeft="61dp"
-        android:layout_marginTop="82dp"
-        android:layout_marginEnd="89dp"
-        android:layout_marginRight="89dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginLeft="59dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginRight="91dp"
         app:srcCompat="@drawable/acc1" />
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/slide_desc"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_marginStart="6dp"-->
+<!--        android:layout_marginLeft="6dp"-->
+<!--        android:layout_marginTop="412dp"-->
+<!--        android:layout_marginEnd="-6dp"-->
+<!--        android:layout_marginRight="-6dp"-->
+<!--        android:layout_marginBottom="15dp"-->
+<!--        android:ellipsize="end"-->
+<!--        android:includeFontPadding="true"-->
+<!--        android:maxLines="10"-->
+<!--        android:padding="40sp"-->
+<!--        android:scrollbars="vertical"-->
+<!--        android:text="When people talk about disaster preparedness, they mention everything — defence, warning systems, medical supplies, refuge centres, emergency meals, and all else that comes to mind when the word disaster pops up, all else except the one thing that is most critical to disaster management: Blood."-->
+<!--        android:textColor="@color/colorTransparentWhite"-->
+<!--        android:textColorHighlight="@color/colorTransparentWhite"-->
+<!--        android:textColorHint="@color/colorTransparentWhite"-->
+<!--        android:textColorLink="@color/colorTransparentWhite"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:lineHeight="30sp" />-->
 
     <TextView
         android:id="@+id/slide_desc"
-
-        android:layout_width="match_parent"
-        android:layout_height="313dp"
+        android:layout_width="325dp"
+        android:layout_height="243dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="227dp"
-        android:layout_marginBottom="190dp"
-        android:ellipsize="end"
-        android:includeFontPadding="true"
-        android:maxLines="10"
-        android:padding="40sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="337dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
         android:text="When people talk about disaster preparedness, they mention everything — defence, warning systems, medical supplies, refuge centres, emergency meals, and all else that comes to mind when the word disaster pops up, all else except the one thing that is most critical to disaster management: Blood."
         android:textColor="@color/colorTransparentWhite"
-        android:textColorHighlight="@color/colorTransparentWhite"
-        android:textColorHint="@color/colorTransparentWhite"
-        android:textColorLink="@color/colorTransparentWhite"
-        app:layout_constraintEnd_toEndOf="parent"
         app:lineHeight="30sp" />,
+
+    android:textColor="@color/colorTransparentWhite"
+        app:lineHeight="20sp" />,
 
     android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/colorTransparentWhite"

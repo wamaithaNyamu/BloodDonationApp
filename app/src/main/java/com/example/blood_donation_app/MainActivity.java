@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent  = new Intent(MainActivity.this, onlySignup.class);
                 startActivity(intent);
-                finish();
+//                finish();
             }
         });
 
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent  = new Intent(MainActivity.this, onlyLogins.class);
                 startActivity(intent);
-                finish();
+//                finish();
             }
         });
     }

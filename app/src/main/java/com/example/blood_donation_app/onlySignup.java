@@ -24,7 +24,7 @@ public class onlySignup extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent  = new Intent(onlySignup.this, donorSignup.class);
                 startActivity(intent);
-                finish();
+//                finish();
             }
         });
 
@@ -36,7 +36,7 @@ public class onlySignup extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent  = new Intent(onlySignup.this, hospitalSignup.class);
                 startActivity(intent);
-                finish();
+//                finish();
             }
         });
 

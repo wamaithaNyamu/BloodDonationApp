@@ -52,7 +52,7 @@ public class donorLogin extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent  = new Intent(donorLogin.this, donorSignup.class);
                 startActivity(intent);
-                finish();
+//                finish();
 
             }
         });

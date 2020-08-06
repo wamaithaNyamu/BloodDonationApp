@@ -104,7 +104,7 @@ public class hospitalSignup extends AppCompatActivity {
                     Toast.makeText(hospitalSignup.this, "Your hospital account has been created", Toast.LENGTH_LONG).show();
                     Intent intent  = new Intent(hospitalSignup.this, hospitalDashboard.class);
                     startActivity(intent);
-                    finish();
+//                    finish();
 
                 }
                 else {

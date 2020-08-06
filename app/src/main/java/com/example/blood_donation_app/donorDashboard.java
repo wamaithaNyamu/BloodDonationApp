@@ -23,7 +23,7 @@ public class donorDashboard extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent  = new Intent(donorDashboard.this, donorLogin.class);
                 startActivity(intent);
-                finish();
+//                finish();
             }
         });
     }
