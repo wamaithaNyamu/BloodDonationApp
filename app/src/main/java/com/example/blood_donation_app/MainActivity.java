@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         sliderAdapter = new SliderAdapter(this);
         sliderViewPager.setAdapter(sliderAdapter);
 
-        addDotsIndicator();
+        addDotsIndicator(0);
+        sliderViewPager.addOnPageChangeListener(viewListener);
 
         allSignups = findViewById(R.id.allSignups);
         allSignups.setOnClickListener(new View.OnClickListener() {
@@ -60,8 +61,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void addDotsIndicator(){
+    public void addDotsIndicator(int position){
         nDots = new TextView[4];
+        dots.removeAllViews();
         for(int i=0; i<nDots.length; i++){
             nDots[i]= new TextView(this);
             nDots[i].setText(Html.fromHtml("&#8226;"));            nDots[i].setTextSize(35);
@@ -69,7 +71,28 @@ public class MainActivity extends AppCompatActivity {
 
             dots.addView(nDots[i]);
         }
+        if(nDots.length >0 ){
+            nDots[position].setTextColor(getResources().getColor(R.color.colorAccent));
+        }
 
     }
+
+
+    ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+        }
+
+        @Override
+        public void onPageSelected(int position) {
+            addDotsIndicator(position);
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int state) {
+
+        }
+    };
 }
 
