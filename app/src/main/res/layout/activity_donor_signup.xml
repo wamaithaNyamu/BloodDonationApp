@@ -40,10 +40,10 @@
         android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/donorPasswordSignup1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.817" />
+        app:layout_constraintVertical_bias="0.877" />
 
     <EditText
         android:id="@+id/donorPasswordSignup1"
@@ -60,10 +60,10 @@
         android:textColorHint="@color/colorTransparentWhite"
         app:layout_constraintBottom_toTopOf="@+id/donorPasswordSignup2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.841" />
+        app:layout_constraintVertical_bias="0.924" />
 
     <EditText
         android:id="@+id/donorPasswordSignup2"
@@ -79,10 +79,10 @@
         android:textColorHint="@color/colorTransparentWhite"
         app:layout_constraintBottom_toTopOf="@+id/donorSignupButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.885" />
+        app:layout_constraintVertical_bias="0.939" />
 
     <TextView
         android:id="@+id/donorSignintxt"
@@ -103,13 +103,14 @@
         android:id="@+id/imageView"
         android:layout_width="384dp"
         android:layout_height="143dp"
-        android:layout_marginBottom="572dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044"
         app:srcCompat="@drawable/donor" />
 
     <TextView

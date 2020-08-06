@@ -1,13 +1,15 @@
 package com.example.blood_donation_app;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
-
-
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -15,10 +17,23 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity {
 
     private Button allSignups,allLogins;
+    private ViewPager sliderViewPager;
+    private LinearLayout dots;
+    private SliderAdapter sliderAdapter;
+    private TextView[] nDots;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        sliderViewPager = (ViewPager) findViewById(R.id.viewPager) ;
+        dots = (LinearLayout) findViewById(R.id.dots) ;
+
+        sliderAdapter = new SliderAdapter(this);
+        sliderViewPager.setAdapter(sliderAdapter);
+
+        addDotsIndicator();
 
         allSignups = findViewById(R.id.allSignups);
         allSignups.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +58,18 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    public void addDotsIndicator(){
+        nDots = new TextView[4];
+        for(int i=0; i<nDots.length; i++){
+            nDots[i]= new TextView(this);
+            nDots[i].setText(Html.fromHtml("&#8226;"));            nDots[i].setTextSize(35);
+            nDots[i].setTextColor(getResources().getColor(R.color.colorTransparentWhite));
+
+            dots.addView(nDots[i]);
+        }
+
     }
 }
 
