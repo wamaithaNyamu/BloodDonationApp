@@ -47,30 +47,17 @@
         app:layout_constraintVertical_bias="0.817" />
 
     <TextView
-        android:id="@+id/newDonorName4"
-        android:layout_width="116dp"
-        android:layout_height="23dp"
-        android:text="Date  :"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.807" />
-
-    <TextView
         android:id="@+id/newDonorName6"
         android:layout_width="116dp"
         android:layout_height="23dp"
         android:text="BloodGroup:"
         android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/newDonorName4"
+        app:layout_constraintBottom_toTopOf="@+id/saveNewDonor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.865" />
+        app:layout_constraintVertical_bias="0.741" />
 
     <TextView
         android:id="@+id/newDonorName5"
@@ -84,21 +71,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.851" />
-
-    <EditText
-        android:id="@+id/newDonorDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:ems="10"
-        android:hint="Jane Doe"
-        android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textColorHint="@color/colorTransparentWhite"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.919"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newDonorBloodGroup" />
 
     <EditText
         android:id="@+id/newDonorBloodGroup"

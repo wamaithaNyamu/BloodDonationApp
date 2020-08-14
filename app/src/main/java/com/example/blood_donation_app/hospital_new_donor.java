@@ -9,11 +9,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class hospital_new_donor extends AppCompatActivity {
-    private EditText newDonorName, newDonorID, newDonorEmail, newDonorPhone,newDonorBloodGroup,newDonorDate;
+    private EditText newDonorName, newDonorID, newDonorEmail, newDonorPhone,newDonorBloodGroup;
     private Button saveNewDonor;
 
     FirebaseDatabase rootNode;
@@ -30,7 +36,7 @@ public class hospital_new_donor extends AppCompatActivity {
         newDonorEmail = findViewById(R.id.newDonorEmail);
         newDonorPhone = findViewById(R.id.newDonorPhone);
         newDonorBloodGroup = findViewById(R.id.newDonorBloodGroup);
-        newDonorDate = findViewById(R.id.newDonorDate);
+
 
         saveNewDonor = findViewById(R.id.saveNewDonor);
 
@@ -46,10 +52,11 @@ public class hospital_new_donor extends AppCompatActivity {
                 String strdonoremail = newDonorEmail.getText().toString();
                 String strdonorphone = newDonorPhone.getText().toString();
                 String strnewDonorBloodGroup = newDonorBloodGroup.getText().toString();
-                String strnewDonorDate = newDonorDate.getText().toString();
 
-
-                NewDonorHelperClass helper = new NewDonorHelperClass(strdonorname,strdonorid,strdonoremail,strdonorphone,strnewDonorBloodGroup,strnewDonorDate);
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                String hospitalUID = user.getUid();
+                String currentDatedTime = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+                NewDonorHelperClass helper = new NewDonorHelperClass(currentDatedTime,hospitalUID,strdonorname,strdonorid,strdonoremail,strdonorphone,strnewDonorBloodGroup);
 
 
 

@@ -3,16 +3,39 @@ package com.example.blood_donation_app;
 public class NewDonorHelperClass {
 
 
-    String newDonorName,newDonorID,newDonorEmail,newDonorPhone,newDonorBloodGroup,newDonorDate;
+    String currentDateandTime,hospitalUID , newDonorName,newDonorID,newDonorEmail,newDonorPhone,newDonorBloodGroup;
 
-    public NewDonorHelperClass(String newDonorName, String newDonorID, String newDonorEmail, String newDonorPhone, String newDonorBloodGroup, String newDonorDate) {
+    public NewDonorHelperClass(String currentDateandTime, String hospitalUID, String newDonorName, String newDonorID, String newDonorEmail, String newDonorPhone, String newDonorBloodGroup) {
         this.newDonorName = newDonorName;
         this.newDonorID = newDonorID;
         this.newDonorEmail = newDonorEmail;
         this.newDonorPhone = newDonorPhone;
         this.newDonorBloodGroup = newDonorBloodGroup;
-        this.newDonorDate = newDonorDate;
+
+        this.hospitalUID = hospitalUID;
+        this.currentDateandTime=currentDateandTime;
     }
+
+
+    public String currentDateandTime() {
+        return currentDateandTime;
+    }
+
+    public void currentDateandTime(String currentDateandTime) {
+        this.currentDateandTime = currentDateandTime;
+    }
+
+
+    public String gethospitalUID() {
+        return hospitalUID;
+    }
+
+    public void sethospitalUID(String hospitalUID) {
+        this.hospitalUID = hospitalUID;
+    }
+
+
+
 
     public String getnewDonorName() {
 
@@ -64,19 +87,6 @@ public class NewDonorHelperClass {
         public void setnewDonorBloodGroup(String newDonorBloodGroup) {
             this.newDonorBloodGroup = newDonorBloodGroup;
         }
-
-
-
-        public String getnewDonorDate() {
-            return newDonorDate;
-        }
-
-        public void setnewDonorDate(String newDonorDate) {
-            this.newDonorDate = newDonorDate;
-        }
-
-
-
 
 
 

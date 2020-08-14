@@ -8,7 +8,7 @@
     tools:context=".hospital_profile">
 
     <Button
-        android:id="@+id/saveNewDonor"
+        android:id="@+id/hospitalLogoutbutton"
         android:layout_width="412dp"
         android:layout_height="73dp"
         android:background="@color/colorPrimary"
@@ -22,79 +22,158 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="71dp"
-        android:layout_height="36dp"
-        android:gravity="center_horizontal"
-        android:text="Head"
-        android:textAlignment="center"
+        android:id="@+id/juyhtgre"
+        android:layout_width="116dp"
+        android:layout_height="23dp"
+        android:text="Name :"
         android:textColor="@color/colorAccent"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/saveNewDonor"
+        app:layout_constraintBottom_toTopOf="@+id/newHospitalName2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.105" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="71dp"
-        android:layout_height="36dp"
-        android:gravity="center_horizontal"
-        android:text="Name"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/saveNewDonor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.118" />
+        app:layout_constraintVertical_bias="0.608" />
 
     <TextView
-        android:id="@+id/hospitalNameqq"
-        android:layout_width="172dp"
-        android:layout_height="42dp"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:gravity="center_horizontal"
+        android:id="@+id/newHospitalName2"
+        android:layout_width="116dp"
+        android:layout_height="23dp"
+        android:text="Registration No. :"
         android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/saveNewDonor"
+        app:layout_constraintBottom_toTopOf="@+id/newHospitalName3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.606"
+        app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintVertical_bias="0.686" />
 
     <TextView
-        android:id="@+id/hospitalOwner"
-        android:layout_width="172dp"
-        android:layout_height="42dp"
-        android:gravity="center_horizontal"
-        android:text="TextView"
-        android:textAlignment="center"
+        android:id="@+id/newHospitalName3"
+        android:layout_width="116dp"
+        android:layout_height="23dp"
+        android:text="Email :"
         android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/saveNewDonor"
+        app:layout_constraintBottom_toTopOf="@+id/newHospitalName5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.606"
+        app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hospitalNameqq"
-        app:layout_constraintVertical_bias="0.082" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.711" />
+
+    <TextView
+        android:id="@+id/newHospitalName6"
+        android:layout_width="116dp"
+        android:layout_height="23dp"
+        android:text="Location"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/saveNewHospital"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.894" />
+
+    <TextView
+        android:id="@+id/newHospitalName5"
+        android:layout_width="116dp"
+        android:layout_height="23dp"
+        android:text="Phone Number  :"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/newHospitalName6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.799" />
+
+    <EditText
+        android:id="@+id/newHospitalLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:hint="Nairobi, Kariobangi South"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@color/colorTransparentWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newHospitalPhone" />
+
+    <EditText
+        android:id="@+id/newHospitalPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:ems="10"
+        android:hint="0712345678"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@color/colorTransparentWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newHospitalEmail" />
+
+    <EditText
+        android:id="@+id/newHospitalEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="john@doe.com"
+        android:inputType="textPersonName"
+        android:shadowColor="#00FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@color/colorTransparentWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newHospitalID" />
+
+    <EditText
+        android:id="@+id/newHospitalID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="12345678"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@color/colorTransparentWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newHospitalName" />
+
+    <EditText
+        android:id="@+id/newHospitalName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Hakuna Matata Hospital"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@color/colorTransparentWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/hospitalUpdateProfile"
-        android:layout_width="188dp"
-        android:layout_height="76dp"
+        android:id="@+id/saveNewHospital"
+        android:layout_width="412dp"
+        android:layout_height="73dp"
         android:background="@color/colorPrimary"
-        android:text="Update Details"
-        android:textColor="@color/colorAccent"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/saveNewDonor"
+        android:text="UPDATE DETAILS"
+        android:textColor="@color/colorTransparentWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hospitalOwner"
-        app:layout_constraintVertical_bias="0.621" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.869" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
