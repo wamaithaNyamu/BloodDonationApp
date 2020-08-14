@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".hospital_profile"></activity>
+        <activity android:name=".hospital_signup_details"></activity>
+        <activity android:name=".hospital_profile" />
         <activity android:name=".hospital_new_donor" />
         <activity android:name=".hospital_recent_donor" />
         <activity android:name=".onlySignup" />

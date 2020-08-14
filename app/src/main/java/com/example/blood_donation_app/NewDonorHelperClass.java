@@ -3,14 +3,7 @@ package com.example.blood_donation_app;
 public class NewDonorHelperClass {
 
 
-        String newDonorName,newDonorID,newDonorEmail,newDonorPhone,newDonorBloodGroup,newDonorDate;
-
-
-//    public NewDonorHelperClass(String newDonorName, String newDonorID, String newDonorEmail, String newDonorPhone, String newDonorBloodGroup, String newDonorDate) {
-//
-//    }
-
-
+    String newDonorName,newDonorID,newDonorEmail,newDonorPhone,newDonorBloodGroup,newDonorDate;
 
     public NewDonorHelperClass(String newDonorName, String newDonorID, String newDonorEmail, String newDonorPhone, String newDonorBloodGroup, String newDonorDate) {
         this.newDonorName = newDonorName;
