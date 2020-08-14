@@ -8,7 +8,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:338177213093:android:4557dd90dfb62faf97834c",
+        "mobilesdk_app_id": "1:338177213093:android:82982f41a7036c7097834c",
         "android_client_info": {
           "package_name": "com.example.blood_donation_app"
         }
@@ -19,43 +19,6 @@
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.blood_donation_app",
-            "certificate_hash": "643ed91e4bf001617f0851c8a78336d99cb38c55"
-          }
-        },
-        {
-          "client_id": "338177213093-0jn007m8cdqmci2cton4fg4rk68apc7f.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD9V8aFXZKoDckCBk_3JB0QRaPVQhsPB58"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "338177213093-0jn007m8cdqmci2cton4fg4rk68apc7f.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:338177213093:android:35aaf5fff0d4dd9097834c",
-        "android_client_info": {
-          "package_name": "com.example.firebase"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "338177213093-m524v7d28cqou9c2rdcvvkdolgiuu43i.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.firebase",
             "certificate_hash": "643ed91e4bf001617f0851c8a78336d99cb38c55"
           }
         },
@@ -130,6 +93,43 @@
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.wamaitha_ass4",
+            "certificate_hash": "643ed91e4bf001617f0851c8a78336d99cb38c55"
+          }
+        },
+        {
+          "client_id": "338177213093-0jn007m8cdqmci2cton4fg4rk68apc7f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9V8aFXZKoDckCBk_3JB0QRaPVQhsPB58"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338177213093-0jn007m8cdqmci2cton4fg4rk68apc7f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338177213093:android:6c47454214d199df97834c",
+        "android_client_info": {
+          "package_name": "com.example.wamaitha_endsem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338177213093-rn2jnjkem8e655j04i30oio784s934gb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wamaitha_endsem",
             "certificate_hash": "643ed91e4bf001617f0851c8a78336d99cb38c55"
           }
         },
