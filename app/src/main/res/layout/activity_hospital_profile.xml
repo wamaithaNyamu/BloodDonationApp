@@ -64,11 +64,12 @@
         android:id="@+id/newHospitalName6"
         android:layout_width="116dp"
         android:layout_height="23dp"
+        android:layout_marginTop="488dp"
         android:text="Location"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/saveNewHospital"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.894" />
@@ -163,7 +164,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/saveNewHospital"
+        android:id="@+id/updateHospitalDetails"
         android:layout_width="412dp"
         android:layout_height="73dp"
         android:background="@color/colorPrimary"
