@@ -1,7 +1,7 @@
 package com.example.blood_donation_app;
 
-public class hospitalDetailsSignupHelperClass {
-    public hospitalDetailsSignupHelperClass(String newHospitalName, String newHospitalID, String newHospitalEmail, String newHospitalPhone, String newHospitalLocation) {
+public class hospitalProfileHelper {
+    public hospitalProfileHelper(String newHospitalName, String newHospitalID, String newHospitalEmail, String newHospitalPhone, String newHospitalLocation) {
         this.newHospitalName = newHospitalName;
         this.newHospitalID = newHospitalID;
         this.newHospitalEmail = newHospitalEmail;
@@ -50,7 +50,5 @@ public class hospitalDetailsSignupHelperClass {
     }
 
     String newHospitalName,newHospitalID,newHospitalEmail,newHospitalPhone,newHospitalLocation;
-
-
 
 }

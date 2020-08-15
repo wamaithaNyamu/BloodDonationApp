@@ -20,6 +20,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class hospitalSignup extends AppCompatActivity {
     private EditText email, password1, password2;
@@ -27,11 +30,15 @@ public class hospitalSignup extends AppCompatActivity {
     private TextView signIn;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
+    FirebaseDatabase rootNode;
+
+    DatabaseReference reference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hospital_signup);
         firebaseAuth = firebaseAuth.getInstance();
+
         email = findViewById(R.id.hospitalEmailSignup);
         password1 = findViewById(R.id.hospitalPasswordSignup1);
         password2 = findViewById(R.id.hospitalPasswordSignup2);
@@ -40,16 +47,19 @@ public class hospitalSignup extends AppCompatActivity {
         progressDialog= new ProgressDialog(this);
 
 
+
+
 //        signup button
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Register();
+
             }
         });
 
 
-//        text view for already have an account?
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

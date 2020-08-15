@@ -41,6 +41,8 @@ public class hospital_profile extends AppCompatActivity {
         newHospitalLocation = findViewById(R.id.newHospitalLocation);
         updateHospitalDetails = findViewById(R.id.updateHospitalDetails);
 
+
+
         rootNode = FirebaseDatabase.getInstance();
         reference = rootNode.getReference("Hospitals");
 // Declare this publicly in the class level
@@ -57,7 +59,7 @@ public class hospital_profile extends AppCompatActivity {
                 String strhospitalphone = newHospitalPhone.getText().toString();
                 String strnewHospitalLocation = newHospitalLocation.getText().toString();
 
-                hospitalDetailsSignupHelperClass helper = new hospitalDetailsSignupHelperClass(strhospitalname,strhospitalid,strhospitalemail,strhospitalphone,strnewHospitalLocation);
+                hospitalProfileHelper helper = new hospitalProfileHelper(strhospitalname,strhospitalid,strhospitalemail,strhospitalphone,strnewHospitalLocation);
 
 
                 //push values into users
@@ -75,8 +77,12 @@ public class hospital_profile extends AppCompatActivity {
         hospitalLogoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent  = new Intent(hospital_profile.this, hospitalLogin.class);
+                Intent intent = new Intent(hospital_profile.this, hospitalLogin.class)
+                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
+               finish();
+
 //                finish();
 
             }

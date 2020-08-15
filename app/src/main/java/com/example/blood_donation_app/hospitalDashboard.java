@@ -13,7 +13,7 @@ import androidx.viewpager.widget.ViewPager;
 
 
 public class hospitalDashboard extends AppCompatActivity {
-    private Button addDonor, editProfile, recentDonors;
+    private Button addDonor, editProfile, recentDonors, hospitalBloodBank;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class hospitalDashboard extends AppCompatActivity {
         addDonor = findViewById(R.id.addDonor);
         editProfile = findViewById(R.id.editHospital);
         recentDonors = findViewById(R.id.recentDonors);
+        hospitalBloodBank = findViewById(R.id.hospitalBloodBank);
 
         addDonor.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +48,15 @@ public class hospitalDashboard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent  = new Intent(hospitalDashboard.this, hospital_recent_donor.class);
+                startActivity(intent);
+//                finish();
+
+            }
+        });
+        hospitalBloodBank.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent  = new Intent(hospitalDashboard.this, hospital_blood_bank.class);
                 startActivity(intent);
 //                finish();
 
