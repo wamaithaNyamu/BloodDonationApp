@@ -29,7 +29,7 @@ public class hospitalDetailsSignupHelperClass {
 
         return newHospitalID;
     }
-    public void settnewHospitalID(String newHospitalID) {
+    public void setnewHospitalID(String newHospitalID) {
 
         this.newHospitalID = newHospitalID;
     }

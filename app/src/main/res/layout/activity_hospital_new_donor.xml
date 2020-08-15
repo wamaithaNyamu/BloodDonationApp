@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/gradient2"
     tools:context=".hospital_new_donor">
 
     <TextView
@@ -152,7 +152,7 @@
         android:id="@+id/saveNewDonor"
         android:layout_width="412dp"
         android:layout_height="73dp"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/gradient3"
         android:text="SAVE NEW DONOR"
         android:textColor="@color/colorTransparentWhite"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -160,6 +160,6 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.975" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

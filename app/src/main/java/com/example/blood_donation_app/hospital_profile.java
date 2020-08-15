@@ -27,6 +27,7 @@ public class hospital_profile extends AppCompatActivity {
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
+    DatabaseReference child;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,15 +40,16 @@ public class hospital_profile extends AppCompatActivity {
         newHospitalPhone = findViewById(R.id.newHospitalPhone);
         newHospitalLocation = findViewById(R.id.newHospitalLocation);
         updateHospitalDetails = findViewById(R.id.updateHospitalDetails);
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        final String hospitalUID = user.getUid();
+
         rootNode = FirebaseDatabase.getInstance();
         reference = rootNode.getReference("Hospitals");
-
+// Declare this publicly in the class level
+        ValueEventListener listener;
         updateHospitalDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                String hospitalUID = user.getUid();
                 //get all the values from the text fields
                 String strhospitalname = newHospitalName.getText().toString();
                 String strhospitalid = newHospitalID.getText().toString();
@@ -81,12 +83,14 @@ public class hospital_profile extends AppCompatActivity {
         });
 
 
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String hospitalUID = user.getUid();
 
-        rootNode = FirebaseDatabase.getInstance();
-        reference = rootNode.getReference("Hospitals");
-        reference.addValueEventListener(new ValueEventListener() {
+        child = reference.child(hospitalUID);
+        child.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
                 String strhospitalname = dataSnapshot.child("newHospitalName").getValue().toString();
                 String strhospitalid  = dataSnapshot.child("newHospitalID").getValue().toString();
                 String strhospitalemail = dataSnapshot.child("newHospitalEmail").getValue().toString();
@@ -100,7 +104,6 @@ public class hospital_profile extends AppCompatActivity {
                 newHospitalLocation.setText(strnewHospitalLocation);
 
 
-                Toast.makeText(hospital_profile.this, "Profile Updated", Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {

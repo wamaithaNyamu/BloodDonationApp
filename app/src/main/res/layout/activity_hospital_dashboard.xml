@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
-    tools:context=".hospitalDashboard">
+    android:background="@drawable/gradient2"
+    tools:context=".hospitalDashboard"
+    >
 
 
     <Button
-        android:id="@+id/recenetDonations"
+        android:id="@+id/recentDonors"
         android:layout_width="352dp"
         android:layout_height="189dp"
         android:background="@color/colorPrimary"
@@ -39,16 +40,16 @@
 
     <Button
         android:id="@+id/editHospital"
-        android:layout_width="367dp"
-        android:layout_height="174dp"
+        android:layout_width="347dp"
+        android:layout_height="183dp"
         android:background="@color/colorPrimary"
         android:text="Edit hospital details"
         android:textColor="@color/colorTransparentWhite"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.659"
+        app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.908" />
+        app:layout_constraintVertical_bias="0.897" />
 </androidx.constraintlayout.widget.ConstraintLayout>

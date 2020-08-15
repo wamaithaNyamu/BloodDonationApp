@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:shape="rectangle">
+    <gradient
+        android:endColor="@color/colorAccent"
+        android:centerX="3"
+        android:type="sweep"
+        android:centerColor="@color/colorPrimary"
+        android:startColor="@color/colorPrimaryDark"
+        android:angle="90"
+
+        />
+
+</shape>
+    <!--90 ni juu-->
+    <!--0 chini -->
