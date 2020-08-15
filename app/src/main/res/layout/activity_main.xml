@@ -40,7 +40,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
+        android:id="@+id/sliderViewPager"
         android:layout_width="407dp"
         android:layout_height="598dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,19 +52,6 @@
 
     </androidx.viewpager.widget.ViewPager>
 
-    <LinearLayout
-        android:id="@+id/dots"
-        android:layout_width="398dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="92dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPager"
-        app:layout_constraintVertical_bias="0.2"
-        android:orientation="horizontal"
-        android:textAlignment="center"
-        android:gravity="center_horizontal" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@ package com.example.blood_donation_app;
 public class BloodBankHelper {
 
 
-    public BloodBankHelper(String hospitalUID, String APositive, String ANegative, String BPositive, String BNegative, String OPositive, String ONegative,  String ABPositive,String ABNegative) {
+    public BloodBankHelper(String hospitalUID, int APositive, int ANegative, int BPositive, int BNegative, int OPositive, int ONegative,  int ABPositive,int ABNegative) {
         this.hospitalUID = hospitalUID;
         this.APositive = APositive;
         this.ANegative = ANegative;
@@ -17,9 +17,9 @@ public class BloodBankHelper {
     }
 
     String hospitalUID;
-    String APositive,ANegative,BPositive,BNegative,OPositive,ONegative,ABNegative,ABPositive;
+    int APositive,ANegative,BPositive,BNegative,OPositive,ONegative,ABNegative,ABPositive;
 
-    public BloodBankHelper(String strAPositive, String strANegative, String strBPositive, String strBNegative, String strOPositive, String strONegative, String strABPositive, String strABNegative) {
+    public BloodBankHelper(int strAPositive, int strANegative, int strBPositive, int strBNegative, int strOPositive, int strONegative, int strABPositive, int strABNegative) {
     }
 
     public String getHospitalUID() {
@@ -31,67 +31,67 @@ public class BloodBankHelper {
     }
 
 
-    public String getAPositive() {
+    public int getAPositive() {
         return APositive;
     }
 
-    public void setAPositive(String APositive) {
+    public void setAPositive(int APositive) {
         this.APositive = APositive;
     }
 
-    public String getANegative() {
+    public int getANegative() {
         return ANegative;
     }
 
-    public void setANegative(String ANegative) {
+    public void setANegative(int ANegative) {
         this.ANegative = ANegative;
     }
 
-    public String getBPositive() {
+    public int getBPositive() {
         return BPositive;
     }
 
-    public void setBPositive(String BPositive) {
+    public void setBPositive(int BPositive) {
         this.BPositive = BPositive;
     }
 
-    public String getBNegative() {
+    public int getBNegative() {
         return BNegative;
     }
 
-    public void setBNegative(String BNegative) {
+    public void setBNegative(int BNegative) {
         this.BNegative = BNegative;
     }
 
-    public String getOPositive() {
+    public int getOPositive() {
         return OPositive;
     }
 
-    public void setOPositive(String OPositive) {
+    public void setOPositive(int OPositive) {
         this.OPositive = OPositive;
     }
 
-    public String getONegative() {
+    public int getONegative() {
         return ONegative;
     }
 
-    public void setONegative(String ONegative) {
+    public void setONegative(int ONegative) {
         this.ONegative = ONegative;
     }
 
-    public String getABNegative() {
+    public int getABNegative() {
         return ABNegative;
     }
 
-    public void setABNegative(String ABNegative) {
+    public void setABNegative(int ABNegative) {
         this.ABNegative = ABNegative;
     }
 
-    public String getABPositive() {
+    public int getABPositive() {
         return ABPositive;
     }
 
-    public void setABPositive(String ABPositive) {
+    public void setABPositive(int ABPositive) {
         this.ABPositive = ABPositive;
     }
 

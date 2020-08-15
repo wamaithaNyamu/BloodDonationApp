@@ -3,6 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
 
     <ImageView
         android:id="@+id/slide_image"
@@ -14,70 +22,246 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="59dp"
-        android:layout_marginLeft="59dp"
-        android:layout_marginTop="132dp"
-        android:layout_marginEnd="91dp"
-        android:layout_marginRight="91dp"
-        app:srcCompat="@drawable/acc1" />
+        android:layout_marginStart="63dp"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginRight="87dp"
+        app:srcCompat="@drawable/hosiii" />
 
+        <TextView
+            android:id="@+id/slider_hospital_name"
+            android:layout_width="361dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="188dp"
+            android:layout_marginEnd="31dp"
+            android:layout_marginRight="31dp"
+            android:gravity="center_horizontal"
+            android:text="Hospital Name"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textSize="24sp"
+            app:lineHeight="30sp" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/slide_desc"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-
-<!--        android:layout_alignParentStart="true"-->
-<!--        android:layout_alignParentLeft="true"-->
-<!--        android:layout_alignParentTop="true"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_alignParentRight="true"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:layout_marginStart="6dp"-->
-<!--        android:layout_marginLeft="6dp"-->
-<!--        android:layout_marginTop="412dp"-->
-<!--        android:layout_marginEnd="-6dp"-->
-<!--        android:layout_marginRight="-6dp"-->
-<!--        android:layout_marginBottom="15dp"-->
-<!--        android:ellipsize="end"-->
-<!--        android:includeFontPadding="true"-->
-<!--        android:maxLines="10"-->
-<!--        android:padding="40sp"-->
-<!--        android:scrollbars="vertical"-->
-<!--        android:text="When people talk about disaster preparedness, they mention everything — defence, warning systems, medical supplies, refuge centres, emergency meals, and all else that comes to mind when the word disaster pops up, all else except the one thing that is most critical to disaster management: Blood."-->
-<!--        android:textColor="@color/colorTransparentWhite"-->
-<!--        android:textColorHighlight="@color/colorTransparentWhite"-->
-<!--        android:textColorHint="@color/colorTransparentWhite"-->
-<!--        android:textColorLink="@color/colorTransparentWhite"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:lineHeight="30sp" />-->
-
-    <TextView
-        android:id="@+id/slide_desc"
-        android:layout_width="325dp"
-        android:layout_height="243dp"
+    <SeekBar
+        android:id="@+id/seekAPositive"
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="39dp"
-        android:layout_marginLeft="39dp"
-        android:layout_marginTop="337dp"
-        android:layout_marginEnd="47dp"
-        android:layout_marginRight="47dp"
-        android:text="When people talk about disaster preparedness, they mention everything — defence, warning systems, medical supplies, refuge centres, emergency meals, and all else that comes to mind when the word disaster pops up, all else except the one thing that is most critical to disaster management: Blood."
-        android:textColor="@color/colorTransparentWhite"
-        app:lineHeight="30sp" />,
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="300dp"
+        android:progress="15"/>
+    <SeekBar
+        android:id="@+id/seekANegative"
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="350dp"
+        android:progress="25"/>
 
-    android:textColor="@color/colorTransparentWhite"
-        app:lineHeight="20sp" />,
+    <SeekBar
+        android:id="@+id/seekBPositive"
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="400dp"
+        android:progress="15"/>
+    <SeekBar
+        android:id="@+id/seekBNegative"
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="450dp"
+        android:progress="25"/>
 
-    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="@color/colorTransparentWhite"
-        android:textColorHighlight="@color/colorTransparentWhite"
-        android:textColorHint="@color/colorAccent" />
+    <SeekBar
+        android:id="@+id/seekABPositive"
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="500dp"
+        android:progress="15"/>
+    <SeekBar
+        android:id="@+id/seekABNegative"
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="550dp"
+        android:progress="25"/>
+    <SeekBar
+        android:id="@+id/seekOPositive"
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="600dp"
+        android:progress="15"/>
+    <SeekBar
+        android:id="@+id/seekONegative"
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="650dp"
+        android:progress="25"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="62dp"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="300dp"
+            android:text="A +"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="62dp"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="350dp"
+            android:text="A -"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="62dp"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="400dp"
+            android:text="B +"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="62dp"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="450dp"
+            android:text="B -"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="62dp"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="500dp"
+            android:text="AB +"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="62dp"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="550dp"
+            android:text="AB -"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="62dp"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="600dp"
+            android:text="O +"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="62dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="650dp"
+        android:text="O -"
+        android:textColor="#FFFFFF" />
+
+    </FrameLayout>
+    </LinearLayout>
 
 </RelativeLayout>

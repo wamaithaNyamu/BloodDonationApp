@@ -1,9 +1,11 @@
 package com.example.blood_donation_app;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +26,7 @@ public class hospital_blood_bank extends AppCompatActivity {
     FirebaseDatabase rootNode;
     DatabaseReference reference;
     DatabaseReference child;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,15 +53,17 @@ public class hospital_blood_bank extends AppCompatActivity {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 String hospitalUID = user.getUid();
                 //get all the values from the text fields
-                String strAPositive = APositive.getText().toString();
-                String strANegative = ANegative.getText().toString();
-                String strBPositive = BPositive.getText().toString();
-                String strBNegative = BNegative.getText().toString();
-                String strOPositive = OPositive.getText().toString();
-                String strONegative = ONegative.getText().toString();
-                String strABNegative = ABNegative.getText().toString();
-                String strABPositive = ABPositive.getText().toString();
+                int strAPositive = Integer.parseInt(String.valueOf(APositive.getText()));
+                int strANegative = Integer.parseInt(String.valueOf(ANegative.getText()));
 
+                int strBPositive = Integer.parseInt(String.valueOf(BPositive.getText()));
+                int strBNegative = Integer.parseInt(String.valueOf(BNegative.getText()));
+
+                int strOPositive = Integer.parseInt(String.valueOf(OPositive.getText()));
+                int strONegative = Integer.parseInt(String.valueOf(ONegative.getText()));
+
+                int strABPositive = Integer.parseInt(String.valueOf(ABPositive.getText()));
+                int strABNegative = Integer.parseInt(String.valueOf(ABNegative.getText()));
 
                 BloodBankHelper helper = new BloodBankHelper(hospitalUID,strAPositive,strANegative,strBPositive,strBNegative,strOPositive, strONegative,strABPositive,strABNegative);
 
@@ -81,28 +86,32 @@ public class hospital_blood_bank extends AppCompatActivity {
 
         child = reference.child(hospitalUID);
         child.addValueEventListener(new ValueEventListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
 
+                        Long strAPositive = (Long) dataSnapshot.child("apositive").getValue();
+                        Long strANegative = (Long) dataSnapshot.child("anegative").getValue();
+                        Long strBPositive = (Long) dataSnapshot.child("bpositive").getValue();
+                        Long strBNegative = (Long) dataSnapshot.child("bnegative").getValue();
+                        Long strOPositive = (Long) dataSnapshot.child("opositive").getValue();
+                        Long strONegative = (Long) dataSnapshot.child("onegative").getValue();
+                        Long strABNegative = (Long) dataSnapshot.child("abnegative").getValue();
+                        Long strABPositive = (Long) dataSnapshot.child("abpositive").getValue();
 
-                        String strAPositive = dataSnapshot.child("apositive").getValue().toString();
-                        String strANegative  = dataSnapshot.child("anegative").getValue().toString();
-                        String strBPositive = dataSnapshot.child("bpositive").getValue().toString();
-                        String strBNegative  = dataSnapshot.child("bnegative").getValue().toString();
-                        String strOPositive = dataSnapshot.child("opositive").getValue().toString();
-                        String strONegative = dataSnapshot.child("onegative").getValue().toString();
-                        String strABNegative  = dataSnapshot.child("abnegative").getValue().toString();
-                        String strABPositive = dataSnapshot.child("abpositive").getValue().toString();
 
-                        APositive.setText(strAPositive);
-                        ANegative.setText(strANegative);
-                        BPositive.setText(strBPositive);
-                        BNegative.setText(strBNegative);
-                        OPositive.setText(strOPositive);
-                        ONegative.setText(strONegative);
-                        ABNegative.setText(strABNegative);
-                        ABPositive.setText(strABPositive);
+
+                        APositive.setText(String.valueOf(strAPositive));
+                        ANegative.setText(String.valueOf(strANegative));
+                        BPositive.setText(String.valueOf(strBPositive));
+                        BNegative.setText(String.valueOf(strBNegative));
+                        OPositive.setText(String.valueOf(strOPositive));
+                        ONegative.setText(String.valueOf(strONegative));
+                        ABNegative.setText(String.valueOf(strABNegative));
+                        ABPositive.setText(String.valueOf(strABPositive));
+
+
                 }else{
 
 
@@ -112,33 +121,17 @@ public class hospital_blood_bank extends AppCompatActivity {
                         String hospitalUID = user.getUid();
 
 
-                        String strAPositive = "0";
-                        String strANegative = "0";
-                        String strBPositive = "0";
-                        String strBNegative = "0";
-                        String strOPositive ="0";
-                        String strONegative = "0";
-                        String strABNegative="0";
-                        String strABPositive ="0";
+                        int strAPositive = 0;
+                        int strANegative = 0;
+                        int strBPositive = 0;
+                        int strBNegative = 0;
+                        int strOPositive =0;
+                        int strONegative = 0;
+                        int strABNegative=0;
+                        int strABPositive =0;
 
                         BloodBankHelper helper = new BloodBankHelper( strAPositive,strANegative,strBPositive,strBNegative,strOPositive,strONegative,strABPositive,strABNegative);
-//        progressBar.setVisibility(View.VISIBLE);
                         reference.child(hospitalUID).setValue(helper);
-//                .addOnSuccessListener(new OnSuccessListener<Void>() {
-//            @Override
-//            public void onSuccess(Void aVoid) {
-//
-//                progressBar.setVisibility(View.GONE);
-//            }
-//        })
-//                .addOnFailureListener(new OnFailureListener() {
-//                    @Override
-//                    public void onFailure(@NonNull Exception e) {
-//                        // Write failed
-//                        // ...
-//                        progressBar.setVisibility(View.GONE);
-//                    }
-//                });
 
                     };
 

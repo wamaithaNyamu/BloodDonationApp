@@ -6,73 +6,73 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import java.util.List;
 
 public class SliderAdapter extends PagerAdapter {
-
     Context context;
-    LayoutInflater layoutInflater;
+    List<SliderModel> sliderModelList;
+    LayoutInflater inflater;
 
-
-    public SliderAdapter(Context context){
+    public SliderAdapter(Context context, List<SliderModel> sliderModelList) {
         this.context = context;
-
-
-    };
-
-//    images
-    public int[] slide_images = {
-        R.drawable.acc1,
-        R.drawable.donor2,
-        R.drawable.donor1,
-        R.drawable.blood
-
-};
-
-    //    images
-    public String[] slide_desc = {
-
-
-            "When people talk about disaster preparedness, they mention everything — defence, warning systems, medical supplies, refuge centres, emergency meals, and all else that comes to mind when the word disaster pops up, all else except the one thing that is most critical to disaster management: Blood.",
-            "The shortage of blood during the crises in this country over the past few years is a sure reason to get anybody worried, and those concerned with ensuring that our blood banks are in order are even more worried",
-            "60% of the blood collected in Kenya is from high school children.50 million is the total population of Kenya.1% of the population is the World Health Organization recommended percentage of the country's blood collection.250,000 -is the current units of blood collected annually in Kenya.",
-            "You can make a difference. Your blood matters. Donate blood and save a life",
-
-
-    };
+        this.sliderModelList = sliderModelList;
+        inflater = LayoutInflater.from(context);
+    }
 
     @Override
     public int getCount() {
-        return slide_images.length;
+        return sliderModelList.size();
     }
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view == (RelativeLayout) object;
+        return view == object;
     }
 
-    public Object instantiateItem(ViewGroup container, int position){
-        layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.slide_layout,container, false);
+    @Override
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+        ((ViewPager)container ).removeView((View)object);
+    }
 
-        ImageView slideImageView = (ImageView) view.findViewById(R.id.slide_image);
-        TextView slideDesc = (TextView) view.findViewById(R.id.slide_desc);
+    @NonNull
+    @Override
+    public Object instantiateItem(@NonNull ViewGroup container, int position) {
+        View view = inflater.inflate(R.layout.slide_layout, container, false);
+
+        TextView hospitalName = (TextView)view.findViewById(R.id.slider_hospital_name);
+        SeekBar Apositive = (SeekBar)view.findViewById(R.id.seekAPositive);
+        SeekBar ANegative = (SeekBar)view.findViewById(R.id.seekANegative);
+
+        SeekBar Bpositive = (SeekBar)view.findViewById(R.id.seekBPositive);
+        SeekBar BNegative = (SeekBar)view.findViewById(R.id.seekBNegative);
+
+        SeekBar ABpositive = (SeekBar)view.findViewById(R.id.seekABPositive);
+        SeekBar ABNegative = (SeekBar)view.findViewById(R.id.seekABNegative);
+
+        SeekBar Opositive = (SeekBar)view.findViewById(R.id.seekOPositive);
+        SeekBar ONegative = (SeekBar)view.findViewById(R.id.seekONegative);
 
 
-        slideImageView.setImageResource(slide_images[position]);
-        slideDesc.setText(slide_desc[position]);
+        hospitalName.setText(sliderModelList.get(position).getHospitalName());
+        Apositive.setProgress(sliderModelList.get(position).getAPositive());
+        ANegative.setProgress(sliderModelList.get(position).getANegative());
+
+        Bpositive.setProgress(sliderModelList.get(position).getBPositive());
+        BNegative.setProgress(sliderModelList.get(position).getBNegative());
+
+        ABpositive.setProgress(sliderModelList.get(position).getABPositive());
+        ABNegative.setProgress(sliderModelList.get(position).getABNegative());
+
+        Opositive.setProgress(sliderModelList.get(position).getOPositive());
+        ONegative.setProgress(sliderModelList.get(position).getONegative());
         container.addView(view);
-
         return view;
-    }
-
-     @Override
-    public void destroyItem(ViewGroup container, int position, Object object){
-
-        container.removeView((RelativeLayout) object);
-     }
-
+    };
 }

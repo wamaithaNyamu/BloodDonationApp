@@ -30,7 +30,7 @@
         android:layout_marginEnd="0dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF" />
 
@@ -45,7 +45,7 @@
         android:layout_marginEnd="0dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textColor="#FFFFFF" />
 
     <EditText
@@ -59,7 +59,7 @@
         android:layout_marginEnd="0dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textColor="#FFFFFF" />
 
     <EditText
@@ -73,7 +73,7 @@
         android:layout_marginEnd="0dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textColor="#FFFFFF" />
 
     <EditText
@@ -88,7 +88,7 @@
         android:layout_marginEnd="0dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textColor="#FFFFFF" />
 
     <EditText
@@ -103,7 +103,7 @@
         android:layout_marginEnd="0dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textColor="#FFFFFF" />
 
     <EditText
@@ -118,7 +118,7 @@
         android:layout_marginEnd="0dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textColor="#FFFFFF" />
 
     <EditText
@@ -133,7 +133,7 @@
         android:layout_marginEnd="0dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textColor="#FFFFFF" />
 
     <TextView
