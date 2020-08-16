@@ -1,67 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient2"
-    tools:context=".hospitalDashboard"
-    >
+    tools:context=".hospitalDashboard">
 
 
     <Button
         android:id="@+id/recentDonors"
-        android:layout_width="191dp"
-        android:layout_height="117dp"
+        android:layout_width="120dp"
+        android:layout_height="85dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginBottom="165dp"
         android:background="@color/colorPrimary"
         android:text="View recent donors"
         android:textColor="@color/colorTransparentWhite"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/addDonor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.242" />
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/addDonor"
-        android:layout_width="191dp"
-        android:layout_height="117dp"
+        android:layout_width="120dp"
+        android:layout_height="85dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="67dp"
+        android:layout_marginRight="67dp"
         android:background="@color/colorPrimary"
         android:text="Add donor"
         android:textColor="@color/colorTransparentWhite"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/editHospital"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.651" />
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/editHospital"
-        android:layout_width="191dp"
-        android:layout_height="117dp"
+        android:layout_width="120dp"
+        android:layout_height="85dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="62dp"
+        android:layout_marginLeft="62dp"
         android:background="@color/colorPrimary"
         android:text="Edit hospital details"
         android:textColor="@color/colorTransparentWhite"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.566" />
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/hospitalBloodBank"
-        android:layout_width="191dp"
-        android:layout_height="117dp"
+        android:layout_width="120dp"
+        android:layout_height="85dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="161dp"
         android:background="@color/colorPrimary"
         android:text="Blood Bank"
         android:textColor="@color/colorTransparentWhite"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.874" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="164dp"
+        android:layout_height="58dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="184dp"
+        android:text="Welcome ,"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/loggedInHospitalName"
+        android:layout_width="164dp"
+        android:layout_height="58dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="182dp"
+        android:layout_marginLeft="182dp"
+        android:layout_marginTop="184dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF" />
+</RelativeLayout>
