@@ -13,16 +13,16 @@
         android:layout_height="40dp"
         android:background="#11000000"
         android:gravity="center_horizontal"
-        android:text="SIGN UP"
+        android:text="Next"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.843" />
+        app:layout_constraintVertical_bias="0.83" />
 
     <EditText
         android:id="@+id/donorEmailSignup"

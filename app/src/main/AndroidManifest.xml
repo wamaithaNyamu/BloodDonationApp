@@ -9,11 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".hospital_blood_bank"></activity>
+        <activity android:name=".donor_signup_details"></activity>
+        <activity android:name=".donor_profile" />
+        <activity android:name=".hospital_blood_bank" />
         <activity android:name=".hospital_signup_details" />
         <activity android:name=".hospital_profile" />
         <activity android:name=".hospital_new_donor" />
         <activity android:name=".hospital_recent_donor" />
+        <activity android:name=".donor_recent_donations" />
+
         <activity android:name=".onlySignup" />
         <activity android:name=".onlyLogins" />
         <activity android:name=".donorDashboard" />
@@ -22,10 +26,7 @@
         <activity android:name=".donorSignup" />
         <activity android:name=".hospitalLogin" />
         <activity android:name=".donorLogin" />
-        <activity android:name=".MainActivity"/>
-
-
-
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/SplashTheme">
@@ -35,8 +36,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
     </application>
 
 </manifest>

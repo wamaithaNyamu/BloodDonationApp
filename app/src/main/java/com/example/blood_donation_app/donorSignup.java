@@ -105,7 +105,7 @@ public class donorSignup extends AppCompatActivity {
                 if(task.isSuccessful()){
 
                     Toast.makeText(donorSignup.this, "Your donor account has been created", Toast.LENGTH_LONG).show();
-                    Intent intent  = new Intent(donorSignup.this, donorDashboard.class);
+                    Intent intent  = new Intent(donorSignup.this, donor_signup_details.class);
                     startActivity(intent);
                     finish();
 
