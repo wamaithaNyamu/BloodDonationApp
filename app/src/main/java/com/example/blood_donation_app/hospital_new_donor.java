@@ -1,14 +1,18 @@
 package com.example.blood_donation_app;
 
+import java.util.Random;
+
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import java.util.Calendar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -41,6 +45,7 @@ public class hospital_new_donor extends AppCompatActivity {
         saveNewDonor = findViewById(R.id.saveNewDonor);
 
         saveNewDonor.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View v) {
                 rootNode = FirebaseDatabase.getInstance();
@@ -58,10 +63,12 @@ public class hospital_new_donor extends AppCompatActivity {
                 NewDonorHelperClass helper = new NewDonorHelperClass(hospitalUID,strdonorname,strdonorid,strdonoremail,strdonorphone,strnewDonorBloodGroup);
 
 
+                Date timeNow = Calendar.getInstance().getTime();
+
 
                 //push values into users
                 //reference.setValue(helper);
-                reference.child(strdonorid).child(hospitalUID).setValue(helper);
+                reference.child(strdonorid).child(hospitalUID).child(String.valueOf(timeNow)).setValue(helper);
 
                 Toast.makeText(hospital_new_donor.this, "New Donor saved", Toast.LENGTH_SHORT).show();
                 Intent intent  = new Intent(hospital_new_donor.this, hospitalDashboard.class);
