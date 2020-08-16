@@ -55,14 +55,13 @@ public class hospital_new_donor extends AppCompatActivity {
 
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 String hospitalUID = user.getUid();
-                String currentDatedTime = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
-                NewDonorHelperClass helper = new NewDonorHelperClass(currentDatedTime,hospitalUID,strdonorname,strdonorid,strdonoremail,strdonorphone,strnewDonorBloodGroup);
+                NewDonorHelperClass helper = new NewDonorHelperClass(hospitalUID,strdonorname,strdonorid,strdonoremail,strdonorphone,strnewDonorBloodGroup);
 
 
 
                 //push values into users
                 //reference.setValue(helper);
-                reference.child(strdonorid).setValue(helper);
+                reference.child(strdonorid).child(hospitalUID).setValue(helper);
 
                 Toast.makeText(hospital_new_donor.this, "New Donor saved", Toast.LENGTH_SHORT).show();
                 Intent intent  = new Intent(hospital_new_donor.this, hospitalDashboard.class);

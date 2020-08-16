@@ -4,7 +4,7 @@ package com.example.blood_donation_app;
 public class BloodBankHelper {
 
 
-    public BloodBankHelper(String HospitalName, int APositive, int ANegative, int BPositive, int BNegative, int OPositive, int ONegative,  int ABPositive,int ABNegative) {
+    public BloodBankHelper(String Letter, String HospitalName, int APositive, int ANegative, int BPositive, int BNegative, int OPositive, int ONegative,  int ABPositive,int ABNegative) {
         this.HospitalName = HospitalName;
         this.APositive = APositive;
         this.ANegative = ANegative;
@@ -14,8 +14,18 @@ public class BloodBankHelper {
         this.ONegative = ONegative;
         this.ABNegative = ABNegative;
         this.ABPositive = ABPositive;
+        this.Letter = Letter;
     }
 
+    public String getLetter() {
+        return Letter;
+    }
+
+    public void setLetter(String letter) {
+        Letter = letter;
+    }
+
+    String Letter;
     String HospitalName;
     int APositive,ANegative,BPositive,BNegative,OPositive,ONegative,ABNegative,ABPositive;
 

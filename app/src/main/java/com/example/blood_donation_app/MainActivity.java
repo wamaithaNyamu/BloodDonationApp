@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements IFirebaseLoadDone
     FirebaseDatabase rootNode;
     DatabaseReference reference;
     DatabaseReference reference1;
+    TextView letter,hosName;
 
     IFirebaseLoadDone iFirebaseLoadDone;
 
@@ -49,6 +51,9 @@ public class MainActivity extends AppCompatActivity implements IFirebaseLoadDone
         reference1 = rootNode.getReference("Hospitals").child("hospitalUID");
         iFirebaseLoadDone = this;
         sliderViewPager = (ViewPager)findViewById(R.id.sliderViewPager);
+//        letter = findViewById(R.id.letter);
+//        hosName = findViewById(R.id.slider_hospital_name);
+
         sliderViewPager.setPageTransformer(true,new DepthPageTransformer());
         loadHospitals();
         progressDialog= new ProgressDialog(this);
@@ -104,6 +109,10 @@ public class MainActivity extends AppCompatActivity implements IFirebaseLoadDone
                 iFirebaseLoadDone.onFirebaseLoadFailed(databaseError.getMessage());
             }
         });
+
+//        letter
+//        char theName = hosName.getText().toString().charAt(0);
+//        letter.setText(theName);
 
     }
 

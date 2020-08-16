@@ -49,6 +49,8 @@ public class SliderAdapter extends PagerAdapter {
         View view = inflater.inflate(R.layout.slide_layout, container, false);
 
         TextView hospitalName = (TextView)view.findViewById(R.id.slider_hospital_name);
+        TextView letter = (TextView) view.findViewById(R.id.letter);
+
         SeekBar Apositive = (SeekBar)view.findViewById(R.id.seekAPositive);
         SeekBar ANegative = (SeekBar)view.findViewById(R.id.seekANegative);
 
@@ -61,7 +63,7 @@ public class SliderAdapter extends PagerAdapter {
         SeekBar Opositive = (SeekBar)view.findViewById(R.id.seekOPositive);
         SeekBar ONegative = (SeekBar)view.findViewById(R.id.seekONegative);
 
-
+        letter.setText(sliderModelList.get(position).getLetter());
         hospitalName.setText(sliderModelList.get(position).getHospitalName());
 
         Apositive.setProgress(sliderModelList.get(position).getAPositive());

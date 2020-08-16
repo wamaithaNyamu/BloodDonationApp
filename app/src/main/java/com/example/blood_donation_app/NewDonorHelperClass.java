@@ -3,9 +3,9 @@ package com.example.blood_donation_app;
 public class NewDonorHelperClass {
 
 
-    String currentDateandTime,hospitalUID , newDonorName,newDonorID,newDonorEmail,newDonorPhone,newDonorBloodGroup;
+    String hospitalUID , newDonorName,newDonorID,newDonorEmail,newDonorPhone,newDonorBloodGroup;
 
-    public NewDonorHelperClass(String currentDateandTime, String hospitalUID, String newDonorName, String newDonorID, String newDonorEmail, String newDonorPhone, String newDonorBloodGroup) {
+    public NewDonorHelperClass( String hospitalUID, String newDonorName, String newDonorID, String newDonorEmail, String newDonorPhone, String newDonorBloodGroup) {
         this.newDonorName = newDonorName;
         this.newDonorID = newDonorID;
         this.newDonorEmail = newDonorEmail;
@@ -13,17 +13,10 @@ public class NewDonorHelperClass {
         this.newDonorBloodGroup = newDonorBloodGroup;
 
         this.hospitalUID = hospitalUID;
-        this.currentDateandTime=currentDateandTime;
+
     }
 
 
-    public String currentDateandTime() {
-        return currentDateandTime;
-    }
-
-    public void currentDateandTime(String currentDateandTime) {
-        this.currentDateandTime = currentDateandTime;
-    }
 
 
     public String gethospitalUID() {

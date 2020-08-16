@@ -12,23 +12,6 @@
         android:layout_height="match_parent">
 
 
-        <ImageView
-            android:id="@+id/slide_image"
-            android:layout_width="191dp"
-            android:layout_height="94dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="83dp"
-            android:layout_marginLeft="63dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="97dp"
-            android:layout_marginRight="87dp"
-            app:srcCompat="@drawable/hosiii" />
-
         <TextView
             android:id="@+id/slider_hospital_name"
             android:layout_width="361dp"
@@ -276,6 +259,34 @@
         android:layout_marginTop="550dp"
         android:text="O -"
         android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/letter"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:minEms="1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="155dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="31dp"
+            android:layout_marginRight="31dp"
+            android:background="@drawable/profile_circle"
+            android:gravity="center_horizontal"
+            android:text="A"
+
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textSize="66sp"
+            app:lineHeight="30sp" />
 
     </FrameLayout>
     </LinearLayout>

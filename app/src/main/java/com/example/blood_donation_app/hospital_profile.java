@@ -77,7 +77,7 @@ public class hospital_profile extends AppCompatActivity {
         hospitalLogoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(hospital_profile.this, hospitalLogin.class)
+                Intent intent = new Intent(hospital_profile.this, MainActivity.class)
                         .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                         .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
