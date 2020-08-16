@@ -22,13 +22,21 @@
         <activity android:name=".donorSignup" />
         <activity android:name=".hospitalLogin" />
         <activity android:name=".donorLogin" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"/>
+
+
+
+        <activity
+            android:name=".SplashScreenActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
     </application>
 
 </manifest>
