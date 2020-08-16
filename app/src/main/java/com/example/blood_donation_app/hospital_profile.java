@@ -33,7 +33,6 @@ public class hospital_profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hospital_profile);
-        hospitalLogoutButton =findViewById(R.id.hospitalLogoutbutton);
         newHospitalName = findViewById(R.id.newHospitalName);
         newHospitalID = findViewById(R.id.newHospitalID);
         newHospitalEmail = findViewById(R.id.newHospitalEmail);
@@ -74,19 +73,7 @@ public class hospital_profile extends AppCompatActivity {
 
 
 
-        hospitalLogoutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(hospital_profile.this, MainActivity.class)
-                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-               finish();
 
-//                finish();
-
-            }
-        });
 
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();

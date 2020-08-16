@@ -64,11 +64,13 @@ public class hospital_new_donor extends AppCompatActivity {
 
 
                 Date timeNow = Calendar.getInstance().getTime();
+                String strTime = String.valueOf(timeNow);
 
+                String uniqueKey = hospitalUID + "  - "+ strTime;
 
                 //push values into users
                 //reference.setValue(helper);
-                reference.child(strdonorid).child(hospitalUID).child(String.valueOf(timeNow)).setValue(helper);
+                reference.child(uniqueKey).setValue(helper);
 
                 Toast.makeText(hospital_new_donor.this, "New Donor saved", Toast.LENGTH_SHORT).show();
                 Intent intent  = new Intent(hospital_new_donor.this, hospitalDashboard.class);

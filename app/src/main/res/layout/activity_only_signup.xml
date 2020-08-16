@@ -24,7 +24,7 @@
         android:id="@+id/donorImageSignup"
         android:layout_width="315dp"
         android:layout_height="241dp"
-        android:layout_marginTop="444dp"
+        android:layout_marginTop="488dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
