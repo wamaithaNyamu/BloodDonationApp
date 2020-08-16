@@ -33,7 +33,7 @@ public class hospital_blood_bank extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hospital_blood_bank);
         Intent intent = getIntent();
-        final String hospitalName = intent.getStringExtra(hospitalDashboard.EXTRA_NAME);
+        final String HospitalName = intent.getStringExtra(hospitalDashboard.EXTRA_NAME);
 
 
 
@@ -71,7 +71,7 @@ public class hospital_blood_bank extends AppCompatActivity {
                 int strABPositive = Integer.parseInt(String.valueOf(ABPositive.getText()));
                 int strABNegative = Integer.parseInt(String.valueOf(ABNegative.getText()));
 
-                BloodBankHelper helper = new BloodBankHelper(hospitalName,strAPositive,strANegative,strBPositive,strBNegative,strOPositive, strONegative,strABPositive,strABNegative);
+                BloodBankHelper helper = new BloodBankHelper(HospitalName,strAPositive,strANegative,strBPositive,strBNegative,strOPositive, strONegative,strABPositive,strABNegative);
 
 
                 //push values into users
@@ -136,7 +136,7 @@ public class hospital_blood_bank extends AppCompatActivity {
                         int strABNegative=0;
                         int strABPositive =0;
 
-                        BloodBankHelper helper = new BloodBankHelper( strAPositive,strANegative,strBPositive,strBNegative,strOPositive,strONegative,strABPositive,strABNegative);
+                        BloodBankHelper helper = new BloodBankHelper( HospitalName, strAPositive,strANegative,strBPositive,strBNegative,strOPositive,strONegative,strABPositive,strABNegative);
                         reference.child(hospitalUID).setValue(helper);
 
                     };
