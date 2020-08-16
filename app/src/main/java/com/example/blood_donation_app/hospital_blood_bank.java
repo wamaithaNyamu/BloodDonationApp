@@ -71,7 +71,7 @@ public class hospital_blood_bank extends AppCompatActivity {
                 int strABPositive = Integer.parseInt(String.valueOf(ABPositive.getText()));
                 int strABNegative = Integer.parseInt(String.valueOf(ABNegative.getText()));
                 String Letter =Character.toString(HospitalName.charAt(0));   ;
-                BloodBankHelper helper = new BloodBankHelper(Letter,HospitalName,strAPositive,strANegative,strBPositive,strBNegative,strOPositive, strONegative,strABPositive,strABNegative);
+                BloodBankModel helper = new BloodBankModel(Letter,HospitalName,strAPositive,strANegative,strBPositive,strBNegative,strOPositive, strONegative,strABPositive,strABNegative);
 
 
                 //push values into users
@@ -136,7 +136,7 @@ public class hospital_blood_bank extends AppCompatActivity {
                         int strABNegative=0;
                         int strABPositive =0;
 
-                        BloodBankHelper helper = new BloodBankHelper(  strAPositive,strANegative,strBPositive,strBNegative,strOPositive,strONegative,strABPositive,strABNegative);
+                        BloodBankModel helper = new BloodBankModel(  strAPositive,strANegative,strBPositive,strBNegative,strOPositive,strONegative,strABPositive,strABNegative);
                         reference.child(hospitalUID).setValue(helper);
 
                     };

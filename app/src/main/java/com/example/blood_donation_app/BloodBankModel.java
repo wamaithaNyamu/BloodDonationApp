@@ -1,10 +1,10 @@
 package com.example.blood_donation_app;
 
 
-public class BloodBankHelper {
+public class BloodBankModel {
 
 
-    public BloodBankHelper(String Letter, String HospitalName, int APositive, int ANegative, int BPositive, int BNegative, int OPositive, int ONegative,  int ABPositive,int ABNegative) {
+    public BloodBankModel(String Letter, String HospitalName, int APositive, int ANegative, int BPositive, int BNegative, int OPositive, int ONegative, int ABPositive, int ABNegative) {
         this.HospitalName = HospitalName;
         this.APositive = APositive;
         this.ANegative = ANegative;
@@ -29,7 +29,7 @@ public class BloodBankHelper {
     String HospitalName;
     int APositive,ANegative,BPositive,BNegative,OPositive,ONegative,ABNegative,ABPositive;
 
-    public BloodBankHelper(int strAPositive, int strANegative, int strBPositive, int strBNegative, int strOPositive, int strONegative, int strABPositive, int strABNegative) {
+    public BloodBankModel(int strAPositive, int strANegative, int strBPositive, int strBNegative, int strOPositive, int strONegative, int strABPositive, int strABNegative) {
     }
 
     public String getHospitalName() {

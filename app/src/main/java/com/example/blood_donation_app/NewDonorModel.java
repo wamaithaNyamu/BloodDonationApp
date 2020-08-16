@@ -1,18 +1,44 @@
 package com.example.blood_donation_app;
 
-public class NewDonorHelperClass {
+public class NewDonorModel {
 
 
-    String hospitalUID , newDonorName,newDonorID,newDonorEmail,newDonorPhone,newDonorBloodGroup;
+    String HospitalName;
 
-    public NewDonorHelperClass( String hospitalUID, String newDonorName, String newDonorID, String newDonorEmail, String newDonorPhone, String newDonorBloodGroup) {
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    String date;
+    public String getHospitalName() {
+        return HospitalName;
+    }
+
+    public void setHospitalName(String HospitalName) {
+        this.HospitalName = HospitalName;
+    }
+
+
+    String hospitalUID;
+    String newDonorName;
+    String newDonorID;
+    String newDonorEmail;
+    String newDonorPhone;
+    String newDonorBloodGroup;
+
+    public NewDonorModel(String date, String HospitalName, String hospitalUID, String newDonorName, String newDonorID, String newDonorEmail, String newDonorPhone, String newDonorBloodGroup) {
         this.newDonorName = newDonorName;
         this.newDonorID = newDonorID;
         this.newDonorEmail = newDonorEmail;
         this.newDonorPhone = newDonorPhone;
         this.newDonorBloodGroup = newDonorBloodGroup;
-
+        this.HospitalName=HospitalName;
         this.hospitalUID = hospitalUID;
+        this.date = date;
 
     }
 

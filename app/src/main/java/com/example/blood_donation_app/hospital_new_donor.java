@@ -1,7 +1,5 @@
 package com.example.blood_donation_app;
 
-import java.util.Random;
-
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,9 +16,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
 public class hospital_new_donor extends AppCompatActivity {
     private EditText newDonorName, newDonorID, newDonorEmail, newDonorPhone,newDonorBloodGroup;
@@ -28,10 +24,15 @@ public class hospital_new_donor extends AppCompatActivity {
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
+    public static final String EXTRA_NAME = "com.example.blood_donation_app.EXTRA_NAME";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hospital_new_donor);
+        Intent intent = getIntent();
+        final String HospitalName = intent.getStringExtra(hospitalDashboard.EXTRA_NAME);
+
 
 
 
@@ -60,13 +61,14 @@ public class hospital_new_donor extends AppCompatActivity {
 
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 String hospitalUID = user.getUid();
-                NewDonorHelperClass helper = new NewDonorHelperClass(hospitalUID,strdonorname,strdonorid,strdonoremail,strdonorphone,strnewDonorBloodGroup);
-
-
                 Date timeNow = Calendar.getInstance().getTime();
                 String strTime = String.valueOf(timeNow);
 
                 String uniqueKey = hospitalUID + "  - "+ strTime;
+                NewDonorModel helper = new NewDonorModel(strTime,HospitalName, hospitalUID,strdonorname,strdonorid,strdonoremail,strdonorphone,strnewDonorBloodGroup);
+
+
+
 
                 //push values into users
                 //reference.setValue(helper);

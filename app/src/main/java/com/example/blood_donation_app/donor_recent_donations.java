@@ -5,13 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,11 +27,11 @@ import java.util.ArrayList;
 
 public class donor_recent_donations extends AppCompatActivity  {
     RecyclerView recyclerView;
-    ArrayList<RecyvlerModel> arrayList;
+    ArrayList<RecyclerModel> arrayList;
     DatabaseReference reference;
     FirebaseDatabase database;
-    FirebaseRecyclerOptions<RecyvlerModel> options;
-    FirebaseRecyclerAdapter<RecyvlerModel ,RecyvlerViewHolder > adapter;
+    FirebaseRecyclerOptions<RecyclerModel> options;
+    FirebaseRecyclerAdapter<RecyclerModel, RecyclerViewHolder> adapter;
     public static final String EXTRA_NAME = "com.example.blood_donation_app.EXTRA_NAME";
 
 
@@ -76,26 +72,26 @@ public class donor_recent_donations extends AppCompatActivity  {
         final String userUID = user.getUid();
         reference = database.getReference().child("New_Donors");
         final Query query = reference.orderByChild("newDonorName").equalTo(DonorName);
-        arrayList = new ArrayList<RecyvlerModel>();
+        arrayList = new ArrayList<RecyclerModel>();
         query.keepSynced(true);
-        options = new FirebaseRecyclerOptions.Builder<RecyvlerModel>().setQuery(query, RecyvlerModel.class).build();
+        options = new FirebaseRecyclerOptions.Builder<RecyclerModel>().setQuery(query, RecyclerModel.class).build();
 
-        adapter = new FirebaseRecyclerAdapter<RecyvlerModel, RecyvlerViewHolder>(options) {
+        adapter = new FirebaseRecyclerAdapter<RecyclerModel, RecyclerViewHolder>(options) {
 
 
 
             @Override
-            protected void onBindViewHolder(@NonNull final RecyvlerViewHolder recyvlerViewHolder, int position, @NonNull final RecyvlerModel recyvlerModel) {
+            protected void onBindViewHolder(@NonNull final RecyclerViewHolder recyclerViewHolder, int position, @NonNull final RecyclerModel recyclerModel) {
 
                 query.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if(dataSnapshot.exists()){
 
-                            recyvlerViewHolder.newDonorName.setText(recyvlerModel.getnewDonorName());
-                            recyvlerViewHolder.newDonorEmail.setText(recyvlerModel.getnewDonorEmail());
-                            recyvlerViewHolder.newDonorPhone.setText(recyvlerModel.getnewDonorPhone());
-                            recyvlerViewHolder.newDonorBloodGroup.setText(recyvlerModel.getnewDonorBloodGroup());
+
+                            recyclerViewHolder.hospitalName.setText(recyclerModel.getHospitalName());
+                            recyclerViewHolder.date.setText(recyclerModel.getDate());
+
 
 
                         }
@@ -113,10 +109,10 @@ public class donor_recent_donations extends AppCompatActivity  {
 
             @NonNull
             @Override
-            public RecyvlerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_row, parent, false);
+            public RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_donor_row, parent, false);
 
-                return new RecyvlerViewHolder(v);
+                return new RecyclerViewHolder(v);
             }
         };
 

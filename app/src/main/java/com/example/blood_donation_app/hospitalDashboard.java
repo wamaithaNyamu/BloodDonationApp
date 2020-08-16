@@ -62,7 +62,9 @@ public class hospitalDashboard extends AppCompatActivity {
         addDonorImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String hosName = hospitalName.getText().toString();
                 Intent intent  = new Intent(hospitalDashboard.this, hospital_new_donor.class);
+                intent.putExtra(EXTRA_NAME, hosName);
                 startActivity(intent);
 //                finish();
 
