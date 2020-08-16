@@ -26,7 +26,9 @@ public class hospitalDashboard extends AppCompatActivity {
     private TextView hospitalName;
     FirebaseDatabase rootNode;
     DatabaseReference reference;
-    DatabaseReference child;
+
+    public static final String EXTRA_NAME = "com.example.blood_donation_app.EXTRA_NAME";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +91,9 @@ public class hospitalDashboard extends AppCompatActivity {
         hospitalBloodBank.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String hosName = hospitalName.getText().toString();
                 Intent intent  = new Intent(hospitalDashboard.this, hospital_blood_bank.class);
+                intent.putExtra(EXTRA_NAME, hosName);
                 startActivity(intent);
 //                finish();
 

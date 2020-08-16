@@ -26,11 +26,17 @@ public class hospital_blood_bank extends AppCompatActivity {
     FirebaseDatabase rootNode;
     DatabaseReference reference;
     DatabaseReference child;
+    public static final String EXTRA_NAME = "com.example.blood_donation_app.EXTRA_NAME";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hospital_blood_bank);
+        Intent intent = getIntent();
+        final String hospitalName = intent.getStringExtra(hospitalDashboard.EXTRA_NAME);
+
+
+
 
         updateBloodBank =findViewById(R.id.updateBloodBankDetails);
 
@@ -65,7 +71,7 @@ public class hospital_blood_bank extends AppCompatActivity {
                 int strABPositive = Integer.parseInt(String.valueOf(ABPositive.getText()));
                 int strABNegative = Integer.parseInt(String.valueOf(ABNegative.getText()));
 
-                BloodBankHelper helper = new BloodBankHelper(hospitalUID,strAPositive,strANegative,strBPositive,strBNegative,strOPositive, strONegative,strABPositive,strABNegative);
+                BloodBankHelper helper = new BloodBankHelper(hospitalName,strAPositive,strANegative,strBPositive,strBNegative,strOPositive, strONegative,strABPositive,strABNegative);
 
 
                 //push values into users
