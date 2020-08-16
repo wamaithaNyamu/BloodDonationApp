@@ -64,7 +64,7 @@
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="200dp"
-
+        android:thumb="@drawable/mythumb"
         android:progress="15"/>
     <SeekBar
         android:id="@+id/seekANegative"
@@ -76,6 +76,8 @@
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="250dp"
+        android:thumb="@drawable/mythumb"
+
         android:progress="25"/>
 
     <SeekBar
@@ -88,6 +90,7 @@
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="300dp"
+        android:thumb="@drawable/mythumb"
 
         android:progress="15"/>
     <SeekBar
@@ -100,6 +103,8 @@
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="350dp"
+        android:thumb="@drawable/mythumb"
+
         android:progress="25"/>
 
     <SeekBar
@@ -112,6 +117,8 @@
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="400dp"
+        android:thumb="@drawable/mythumb"
+
         android:progress="15"/>
     <SeekBar
         android:id="@+id/seekABNegative"
@@ -123,6 +130,8 @@
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="450dp"
+        android:thumb="@drawable/mythumb"
+
         android:progress="25"/>
     <SeekBar
         android:id="@+id/seekOPositive"
@@ -134,7 +143,10 @@
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="500dp"
+        android:thumb="@drawable/mythumb"
+
         android:progress="15"/>
+
     <SeekBar
         android:id="@+id/seekONegative"
         android:layout_width="257dp"
@@ -145,6 +157,8 @@
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="550dp"
+        android:thumb="@drawable/mythumb"
+
         android:progress="25"/>
 
         <TextView

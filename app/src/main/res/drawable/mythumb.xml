@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="20dp"
+        android:height="26dp"
+        android:top="1dp"
+        android:bottom="1dp"
+        android:drawable="@drawable/thumbasset1xxhdpi"/>
+
+</layer-list>
