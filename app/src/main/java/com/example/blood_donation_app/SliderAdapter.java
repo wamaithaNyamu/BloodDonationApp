@@ -2,6 +2,7 @@ package com.example.blood_donation_app;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -30,6 +31,7 @@ public class SliderAdapter extends PagerAdapter {
     public int getCount() {
         return sliderModelList.size();
     }
+
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
@@ -61,18 +63,81 @@ public class SliderAdapter extends PagerAdapter {
 
 
         hospitalName.setText(sliderModelList.get(position).getHospitalName());
+
         Apositive.setProgress(sliderModelList.get(position).getAPositive());
+
+        Apositive.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
+
+
         ANegative.setProgress(sliderModelList.get(position).getANegative());
+        ANegative.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
+
 
         Bpositive.setProgress(sliderModelList.get(position).getBPositive());
+        Bpositive.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
+
+
         BNegative.setProgress(sliderModelList.get(position).getBNegative());
+        BNegative.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
 
         ABpositive.setProgress(sliderModelList.get(position).getABPositive());
+        ABpositive.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
+
         ABNegative.setProgress(sliderModelList.get(position).getABNegative());
+        ABNegative.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
+
 
         Opositive.setProgress(sliderModelList.get(position).getOPositive());
+        Opositive.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
+
         ONegative.setProgress(sliderModelList.get(position).getONegative());
+        ONegative.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
+
+
         container.addView(view);
         return view;
     };
+
+
 }
+

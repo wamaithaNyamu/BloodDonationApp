@@ -12,22 +12,22 @@
         android:layout_height="match_parent">
 
 
-    <ImageView
-        android:id="@+id/slide_image"
-        android:layout_width="260dp"
-        android:layout_height="152dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="63dp"
-        android:layout_marginLeft="63dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="87dp"
-        android:layout_marginRight="87dp"
-        app:srcCompat="@drawable/hosiii" />
+        <ImageView
+            android:id="@+id/slide_image"
+            android:layout_width="191dp"
+            android:layout_height="94dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="83dp"
+            android:layout_marginLeft="63dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="97dp"
+            android:layout_marginRight="87dp"
+            app:srcCompat="@drawable/hosiii" />
 
         <TextView
             android:id="@+id/slider_hospital_name"
@@ -41,7 +41,7 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="17dp"
             android:layout_marginLeft="17dp"
-            android:layout_marginTop="188dp"
+            android:layout_marginTop="128dp"
             android:layout_marginEnd="31dp"
             android:layout_marginRight="31dp"
             android:gravity="center_horizontal"
@@ -54,7 +54,7 @@
             android:textSize="24sp"
             app:lineHeight="30sp" />
 
-    <SeekBar
+        <SeekBar
         android:id="@+id/seekAPositive"
         android:layout_width="257dp"
         android:layout_height="wrap_content"
@@ -63,7 +63,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="200dp"
+
         android:progress="15"/>
     <SeekBar
         android:id="@+id/seekANegative"
@@ -74,7 +75,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="250dp"
         android:progress="25"/>
 
     <SeekBar
@@ -86,7 +87,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="300dp"
+
         android:progress="15"/>
     <SeekBar
         android:id="@+id/seekBNegative"
@@ -97,7 +99,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="350dp"
         android:progress="25"/>
 
     <SeekBar
@@ -109,7 +111,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="400dp"
         android:progress="15"/>
     <SeekBar
         android:id="@+id/seekABNegative"
@@ -120,7 +122,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="450dp"
         android:progress="25"/>
     <SeekBar
         android:id="@+id/seekOPositive"
@@ -131,7 +133,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="500dp"
         android:progress="15"/>
     <SeekBar
         android:id="@+id/seekONegative"
@@ -142,7 +144,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
-        android:layout_marginTop="650dp"
+        android:layout_marginTop="550dp"
         android:progress="25"/>
 
         <TextView
@@ -153,7 +155,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="62dp"
             android:layout_marginLeft="62dp"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="200dp"
             android:text="A +"
             android:textColor="#FFFFFF"
             android:textColorHighlight="#FFFFFF"
@@ -168,7 +170,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="62dp"
             android:layout_marginLeft="62dp"
-            android:layout_marginTop="350dp"
+            android:layout_marginTop="250dp"
             android:text="A -"
             android:textColor="#FFFFFF"
             android:textColorHighlight="#FFFFFF"
@@ -183,7 +185,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="62dp"
             android:layout_marginLeft="62dp"
-            android:layout_marginTop="400dp"
+            android:layout_marginTop="300dp"
             android:text="B +"
             android:textColor="#FFFFFF"
             android:textColorHighlight="#FFFFFF"
@@ -198,7 +200,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="62dp"
             android:layout_marginLeft="62dp"
-            android:layout_marginTop="450dp"
+            android:layout_marginTop="350dp"
             android:text="B -"
             android:textColor="#FFFFFF"
             android:textColorHighlight="#FFFFFF"
@@ -213,7 +215,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="62dp"
             android:layout_marginLeft="62dp"
-            android:layout_marginTop="500dp"
+            android:layout_marginTop="400dp"
             android:text="AB +"
             android:textColor="#FFFFFF"
             android:textColorHighlight="#FFFFFF"
@@ -228,7 +230,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="62dp"
             android:layout_marginLeft="62dp"
-            android:layout_marginTop="550dp"
+            android:layout_marginTop="450dp"
             android:text="AB -"
             android:textColor="#FFFFFF"
             android:textColorHighlight="#FFFFFF"
@@ -243,7 +245,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="62dp"
             android:layout_marginLeft="62dp"
-            android:layout_marginTop="600dp"
+            android:layout_marginTop="500dp"
             android:text="O +"
             android:textColor="#FFFFFF"
             android:textColorHighlight="#FFFFFF"
@@ -257,7 +259,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="62dp"
         android:layout_marginLeft="62dp"
-        android:layout_marginTop="650dp"
+        android:layout_marginTop="550dp"
         android:text="O -"
         android:textColor="#FFFFFF" />
 

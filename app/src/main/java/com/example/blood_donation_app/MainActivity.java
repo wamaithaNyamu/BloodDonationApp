@@ -45,9 +45,8 @@ public class MainActivity extends AppCompatActivity implements IFirebaseLoadDone
 
         rootNode = FirebaseDatabase.getInstance();
         reference = rootNode.getReference("Blood_Banks");
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        String hospitalUID = user.getUid();
-        reference1 = rootNode.getReference("Hospitals").child(hospitalUID);
+
+        reference1 = rootNode.getReference("Hospitals").child("hospitalUID");
         iFirebaseLoadDone = this;
         sliderViewPager = (ViewPager)findViewById(R.id.sliderViewPager);
         sliderViewPager.setPageTransformer(true,new DepthPageTransformer());
@@ -82,7 +81,13 @@ public class MainActivity extends AppCompatActivity implements IFirebaseLoadDone
 //                finish();
             }
         });
+
+
+
+
         }
+
+
 
     private void loadHospitals() {
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
