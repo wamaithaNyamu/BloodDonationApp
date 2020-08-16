@@ -32,12 +32,12 @@
         <TextView
             android:id="@+id/date"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="100dp"
             android:layout_marginTop="5dp"
             android:drawablePadding="10dp"
             android:hint="jan@gmail,com"
             android:drawableLeft="@drawable/date"
-
+            android:maxLines="4"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
             android:textSize="20sp" />
